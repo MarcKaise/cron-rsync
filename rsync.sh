@@ -4,11 +4,11 @@
 # Add following command on "crontab -e" then "rsync" will backup files from SRC to DST.
 
 # cron command
-#* * * * * cd /home/mkaise/git/demo-rsync; ./rsync_backup_usb.sh 1>> ./log_result.txt 2>&1
+#* * * * * cd //home/mkaise/git/cron-rsync; ./rsync.sh 1>> ./log_cron.txt 2>&1
 
 # backup configulation
-src_path="src/"
-dst_path="/media/mkaise/usbmem_red/backup-latest"
+src_path="/mnt/nas/"
+dst_path="/mnt/backup/backup-latest"
 log_file="log_rsync.txt"
 timestamp=$(date +%Y%m%d-%H%M%S)
 
