@@ -4,7 +4,7 @@
 # Add following command on "crontab -e" then "rsync" will backup files from SRC to DST.
 
 # cron command
-#* * * * * cd //home/mkaise/git/cron-rsync; ./rsync.sh 1>> ./log_cron.txt 2>&1
+#02 6 * * * cd //home/mkaise/git/cron-rsync; ./rsync.sh 1>> ./log_cron.txt 2>&1
 
 # backup configulation
 src_path="/mnt/nas/"
