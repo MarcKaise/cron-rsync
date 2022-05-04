@@ -13,7 +13,13 @@ log_file="log_rsync.txt"
 timestamp=$(date +%Y%m%d-%H%M%S)
 
 # backup command to be executed by cron
-if rsync -rlt --delete --log-file=$log_file --backup --backup-dir="../backup-$timestamp" $src_path $dst_path;
+if rsync -rlt \
+    --delete \
+    --exclude="*.DS_Store*" \
+    --log-file=$log_file \
+    --backup \
+    --backup-dir="../backup-$timestamp" \
+    $src_path $dst_path;
 then
   echo "$timestamp" "rsync completed successfully."
   exit 0
